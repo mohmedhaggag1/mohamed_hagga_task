@@ -1,0 +1,67 @@
+<!-- section one -->
+<div class="row mt-5 ">
+    <div class="col-lg-3 col-12">
+        <p class="primary fs-24 fw-bold">
+            اختر الشقة
+        </p>
+        <p class="hint fs-14">يمكنك التنقل بين جميع الفلل وسيتم تحديث الصور والمعلومات مباشرة.</p>
+    </div>
+
+    <div class="col-lg-8 col-12 d-flex flex-column flex-lg-row align-items-center flex-center gap-3 gap-lg-5 mb-3">
+        <div class="bg-primary-light rounded-3 d-flex align-items-center justify-content-center p-3 w-30">
+            <img src="/images/icons/dot.png" alt="">
+            <span class="green pe-2">متاحة للحجز</span>
+        </div>
+
+        <div class="bg-white primary-border rounded-3 d-flex align-items-center justify-content-between px-4 py-1 d-none d-md-block">
+            <img src="/images/icons/weui_arrow-filled.png" alt="">
+            <h3 class="primary mb-0 px-5 fw-bold">A-1203</h3>
+            <img src="/images/icons/weui_arrow-filled (1).png" alt="">
+        </div>
+    </div>
+
+    <!-- section two -->
+    <div class="row row-responsive">
+        <div class="col-lg-3">
+            <div class="bg-white rounded-2 shadow-sm px-1 py-2 d-flex align-items-cnter justify-content-center primary-border gap-2">
+
+                <img src="/images/icons/hotel-line.png" alt="">
+                <h3 class="primary pb-0 pt-1">
+                    60 فيلا
+                </h3>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="bg-white rounded-2 shadow-sm px-1 py-2 d-flex align-items-cnter justify-content-center primary-border gap-2">
+
+                <img src="/images/icons/calender.png" alt="" width="40">
+                <h3 class="primary pt-1">
+                    احجز الشقة
+                </h3>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="relative h-100">
+                <input class="input w-100 py-1 rounded-2 primary-border h-100" type="text"
+                    placeholder='ابحث برقم الفيلا ...'>
+                <img class="search-icon" src="/images/icons/search.png" alt="search-icon">
+            </div>
+        </div>
+    </div>
+
+    <!-- section three -->
+    <div class="parent mt-4">
+        @for (item of data; track $index) {
+        <div class="card-item bg-white rounded-2 px-3 py-2 primary-border">
+            <div class="icon">
+                <img [src]="item.icon" [alt]="item.title" width="40" height="40" />
+            </div>
+
+            <div class="content">
+                <p class="hint">{{ item.title }}</p>
+                <p class="fs-18 fw-semibold">{{ item.value }}</p>
+                <p class="hint">{{ item.subTitle }}</p>
+            </div>
+        </div>
+        }
+    </div>

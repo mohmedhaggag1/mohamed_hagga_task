@@ -1,0 +1,30 @@
+<div class="location-card border rounded-4 p-3 bg-white h-100 d-flex align-items-center justify-content-center">
+
+    <div class="row align-items-center g-3">
+
+        <div class="col-md-7">
+            <img [src]="locationData.map" alt="location map" class="map-image w-100 rounded-3">
+            <!-- <iframe [src]="mapUrl" class="map-image w-100 rounded-3" style="border:0;" loading="lazy">
+            </iframe> -->
+        </div>
+
+        <div class="col-md-5 text-end">
+            <h4 class="fw-bold primary mb-2">
+                {{locationData.title}}
+            </h4>
+
+            <h6 class="mb-3 fs-18">
+                {{locationData.address}}
+            </h6>
+
+            <p class="hint fs-14 mb-3">
+                {{locationData.description}}
+            </p>
+
+            <button class="btn btn-outline-primary rounded-3 px-4 d-flex align-items-center gap-2 ms-auto">
+                <img src="/images/contact-us/map-icon.png" width="22">
+                عرض على الخريطة
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+.card {
+  border-radius: 18px;
+}
+
+img {
+  object-fit: contain;
+}
+
+button {
+  border-radius: 12px;
+}
+
+.changeStyle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.fs-22 {
+  font-size: 22px;
+}
+
+.btn-light-gray {
+  background-color: rgba(0, 74, 173, 0.1) !important;
+}

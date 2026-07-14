@@ -1,0 +1,55 @@
+<div class="row gy-4 mt-4 h-100" id="gallery">
+    <div class="col-xl-6 h-100">
+        <div class="card rounded-3  border-none pt-2 h-auto">
+            <div class="title d-lg-flex align-items-center pe-3 pt-2">
+                <p class="h-100"><img src="/images/gallary/youtube.png" alt=""></p>
+                <p class="fs-24 primary fw-bold px-2">جولة افتراضية</p>
+                <p class="hint fs-14">استكشف الشقة بتجربة تفاعلية.</p>
+            </div>
+
+            <div class="vedo">
+                <img src="/images/gallary/video.png" alt="video" width="100%">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- gallary -->
+    <div class="col-xl-6 h-100">
+        <div class="card rounded-3  border-none  h-auto pt-2">
+            <div class="title d-lg-flex align-items-center pe-3 pt-2">
+                <p><img src="/images/gallary/gallary.png" alt=""></p>
+                <p class="fs-24 primary fw-bold px-2">معرض الصور</p>
+                <p class="hint fs-14">صور الشقة من الداخل والخارج.</p>
+            </div>
+
+            <div class="selected-image">
+                <img [src]="selectedImage" alt="gallery">
+            </div>
+
+            <div class="w-100 d-flex align-items-center justify-content-between gap-2 mt-1 px-2 py-3">
+
+                <div (click)="prevImage()" class="cursor-pointer">
+                    <img src="/images/gallary/right-arrow.png" alt="">
+                </div>
+
+
+                <!-- <@for (item of gallaryImages; track $index) { -->
+
+                @for (item of gallaryImages; track $index) {
+
+                <div class="images cursor-pointer" [class.mobile-hidden]="$index > 1" (click)="selectImage($index)"
+                    [class.active]="$index === currentIndex">
+
+                    <img [src]="item.src" alt="">
+                </div>
+
+                }
+                <div (click)="nextImage()" class="cursor-pointer">
+                    <img src="/images/gallary/left-arrow.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

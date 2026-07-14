@@ -1,0 +1,39 @@
+<div class="card shadow-sm border-0 h-100" id="features">
+    <div class="card-body">
+
+        <p class="text-primary fw-bold mb-4 fs-22 pe-3 pb-2">
+            {{ title }}
+        </p>
+
+        <div class="row g-4 pb-3">
+
+            @for(item of items; track item.label){
+
+            <div class="col-4 text-center" [class.changeStyle]="!changeStyle">
+                <img [src]="item.icon" width="22" class="mb-2" />
+
+                <div [class.mb-2]="item.label">
+                    <span class="dark d-block fs-14 hint">
+                        {{ item.label }}
+                    </span>
+
+                    <div class="fw-semibold mt-1 fs-16">
+                        {{ item.value }}
+                    </div>
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+        @if(!changeStyle) {
+        <button class="btn btn-light-gray w-100 mt-5 text-primary fw-bold">
+            عرض مزيد من التفاصيل
+            <img src="/images/icons/arrow-down.png" alt="">
+        </button>
+        }
+
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="bg-white rounded-4  mt-5 p-3">
+
+    <div class="d-flex align-items-center justify-content-start p-3">
+        <h4 class="fw-bold primary fs-22">
+            مخططات الشقة
+        </h4>
+        
+        <small class="pe-3 fs-14 hint">
+            جميع المخططات الهندسية
+        </small>
+
+    </div>
+
+    <div class="row g-3">
+        @for (plan of plans; track plan.title) {
+        <div class="col-lg-3 col-md-6 pb-3">
+            <div class="card border rounded-4 p-3 h-100" [class.border-primary]="plan.active"
+                [class.bg-primary-active]="plan.active">
+
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                    <img [src]="plan.image" [alt]="plan.title" width="72" height="72"
+                        class="rounded-3 object-fit-cover">
+                    <div>
+                        <h6 class="fw-bold primary mb-2">
+                            {{ plan.title }}
+                        </h6>
+
+                        <a href="#" class="text-decoration-none small primary">
+                            عرض المخطط
+                            <img src="/images/apperant/apperant-icon.png" width="16" class="ms-1">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>

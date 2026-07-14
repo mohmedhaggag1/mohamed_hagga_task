@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+@use "../src/app/assets/styles/var.scss" as *;
+
+
+body {
+  background: rgba(238, 248, 242, 1) !important;
+  color: $primary !important;
+  overflow-x: hidden;
+  min-width: 360px !important;
+  direction: rtl;
+   font-family: "Cairo", sans-serif !important;
+  font-optical-sizing: auto;
+}
+
+.hint{
+  color: #64748B;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+.primary-border {
+  border: 1px solid #75777E4D;
+  border-radius: 16px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fs-24 {
+  font-size: 24px;
+}
+
+.fs-36 {
+  font-size: 36px;
+}
+
+.fs-22 {
+  font-size: 22PX;
+}

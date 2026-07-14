@@ -1,0 +1,28 @@
+<app-navbar />
+<app-hero></app-hero>
+
+<div class="content px-3 px-lg-5">
+    <choose-house-unit />
+
+    <gallary />
+
+    <apartment-features />
+
+    <div class="row gy-4 mt-4" id="location">
+        <div class="col-lg-6">
+            <contact-us />
+        </div>
+        <div class="col-lg-6">
+            <location />
+        </div>
+    </div>
+
+    <apartment-plan />
+
+    <download-pdf />
+</div>
+@if(showScrollTop) {
+    <button class="scroll-top" (click)="scrollToTop()">
+        <img src="/images/icons/arrow-up.png" alt="Up" width="100%">
+    </button>
+}

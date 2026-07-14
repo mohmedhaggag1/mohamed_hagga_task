@@ -1,0 +1,21 @@
+<div class="row my-4">
+    @for (item of data; track $index) {
+    <div class="col-lg-6">
+        <div class="pdf-card border rounded-4 p-3 d-flex align-items-center justify-content-between mb-2">
+            <div>
+                <img src="/images/download-icon.svg" alt="download">
+            </div>
+            <div class=" gap-2 d-flex align-items-center">
+                <div>
+                    <p class="fw-semibold">
+                        {{ item.name }}
+                    </p>
+                    <span class="fs-18 size"> PDF - {{item.size}} MB</span>
+                </div>
+                <img src="/images/tdesign_file-pdf-filled.svg" alt="pdf">
+            </div>
+
+        </div>
+    </div>
+    }
+</div>
