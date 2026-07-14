@@ -26,11 +26,6 @@ export class Gallary {
       active: false
     },
     {
-      id: 4,
-      src: '/images/gallary/img4.png',
-      active: false
-    },
-    {
       id: 5,
       src: '/images/gallary/img5.png',
       active: false
