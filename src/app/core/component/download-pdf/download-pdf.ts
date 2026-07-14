@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
 export class DownloadPdf {
 data = [
     {name: 'كتيب المشروع', size: 2.4},
-    {name: 'ملف المواصفات الفنية', size: 4.8},    
+    {name: 'ملف المشروع', size: 4.8},
   ]}
 
   
